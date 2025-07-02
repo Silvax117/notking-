@@ -1,0 +1,9 @@
+{
+  "name": "FF Pro Settings",
+  "short_name": "FFPro",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#0e0e0e",
+  "theme_color": "#e50914",
+  "icons": []
+}

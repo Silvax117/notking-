@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>FF Pro Settings - Home</title>
+<link rel="manifest" href="manifest.json" />
+<meta name="theme-color" content="#0e0e0e" />
+<style>
+  body {
+    background-color: #0e0e0e;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+  h1 {
+    color: #e50914;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .slider-container {
+    margin-bottom: 25px;
+  }
+  label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+  }
+  input[type="range"] {
+    width: 100%;
+    -webkit-appearance: none;
+    height: 8px;
+    border-radius: 12px;
+    background: #333;
+    outline: none;
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #e50914;
+    cursor: pointer;
+    box-shadow: 0 0 8px #e50914;
+  }
+  input[type="range"]::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #e50914;
+    cursor: pointer;
+    box-shadow: 0 0 8px #e50914;
+  }
+  .button {
+    background-color: #e50914;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 15px;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 15px;
+  }
+  .button:hover {
+    background-color: #b4070f;
+  }
+</style>
+</head>
+<body>
+
+<h1>FF Pro Settings</h1>
+
+<div class="slider-container">
+  <label for="sensCamera">Sensibilidade da Câmera</label>
+  <input type="range" min="0" max="100" value="50" id="sensCamera" />
+</div>
+
+<div class="slider-container">
+  <label for="sensRedDot">Sensibilidade Red Dot</label>
+  <input type="range" min="0" max="100" value="50" id="sensRedDot" />
+</div>
+
+<div class="slider-container">
+  <label for="sens2x">Sensibilidade 2x</label>
+  <input type="range" min="0" max="100" value="50" id="sens2x" />
+</div>
+
+<div class="slider-container">
+  <label for="sens4x">Sensibilidade 4x</label>
+  <input type="range" min="0" max="100" value="50" id="sens4x" />
+</div>
+
+<div class="slider-container">
+  <label for="sensScope">Sensibilidade de Mira</label>
+  <input type="range" min="0" max="100" value="50" id="sensScope" />
+</div>
+
+<button class="button" onclick="abrirFreeFire()">Abrir Free Fire</button>
+<button class="button" onclick="abrirFreeFireMax()">Abrir Free Fire Max</button>
+<button class="button" onclick="logout()">Sair</button>
+
+<script>
+  function abrirFreeFire() {
+    const url = "https://play.google.com/store/apps/details?id=com.dts.freefireth"; 
+    window.open(url, '_blank');
+  }
+
+  function abrirFreeFireMax() {
+    const url = "https://play.google.com/store/apps/details?id=com.dts.freefiremax"; 
+    window.open(url, '_blank');
+  }
+
+  function logout() {
+    window.location.href = "index.html";
+  }
+</script>
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js');
+  }
+</script>
+
+</body>
+</html>
